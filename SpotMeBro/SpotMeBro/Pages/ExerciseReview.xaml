@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.ExerciseReview">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label x:Name="exerciseTitlex" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="White"
+                   />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label/>
+            <CollectionView x:Name="thisExerciseSets">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="0,30,0,0">
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="Weight:" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="1" Text="{Binding Weight}" HorizontalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="2" Text="Reps:" HorizontalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="3" Text="{Binding Reps}" HorizontalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout VerticalOptions="End">
+                <Button Text="Completed exercises" FontSize="Medium" Clicked="backToTodaysWorkout_Clicked" BackgroundColor="white"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

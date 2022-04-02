@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.Options">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="OPTIONS"
+                   TextColor="White"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button Text="DELETE ALL EXERCISES"
+                        BackgroundColor="Red" 
+                        TextColor="White"
+                        FontSize="Medium"
+                        Clicked="deleteAllExercises_Clicked"
+                        />
+                <Label/>
+                <Button Text="DELETE ALL WORKOUTS"
+                        Clicked="deleteAllWorkouts_Clicked" 
+                        BackgroundColor="Red" 
+                        TextColor="White"
+                        FontSize="Medium"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

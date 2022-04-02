@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.EditExercise1">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,20">
+            <Entry x:Name="nameEntry" Placeholder="Enter name of new exercise" />
+            <Picker x:Name="BodyPartPicker" Title="Pick the body part this exercise targets." ItemsSource="{StaticResource BodyParts}"/>
+            <Button Text="Add to Exercise Collection" Clicked="AddExerciseToDatabase_Clicked" BackgroundColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="BodyParts" Type="{x:Type x:String}">
+                <x:String>Neck</x:String>
+                <x:String>Shoulders</x:String>
+                <x:String>Back</x:String>
+                <x:String>Chest</x:String>
+                <x:String>Abs</x:String>
+                <x:String>Biceps</x:String>
+                <x:String>Triceps</x:String>
+                <x:String>Forearms</x:String>
+                <x:String>Quads</x:String>
+                <x:String>Gluts</x:String>
+                <x:String>Calfs</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>
+    

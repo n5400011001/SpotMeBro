@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="White"
+             x:Class="SpotMeBro.Pages.Main">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="SPOT ME BRO"
+                   TextColor="White"
+                   HorizontalOptions="CenterAndExpand"
+                   />  
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button Text="START TODAYS WORKOUT!"
+                    BorderWidth="1" 
+                    BorderColor="White" 
+                    BackgroundColor="White" 
+                    BorderRadius="8"
+                    TextColor="Black"
+                    Clicked="recordWorkoutClicked" 
+                    FontSize="Large"
+                    Padding="0,0,0,30"/>
+
+            <Button Text="ADD/EDIT WORKOUTS"
+                    BorderWidth="1" 
+                    BorderColor="White" 
+                    BackgroundColor="White" 
+                    BorderRadius="8"
+                    TextColor="Black"
+                    Clicked="addEditWorkoutsClicked" 
+                    FontSize="Large"
+                    Padding="0,30,0,30"/>
+
+            <Button Text="SEE YOUR PROGRESS"
+                    BorderWidth="1" 
+                    BorderColor="White" 
+                    BackgroundColor="White" 
+                    BorderRadius="8"
+                    TextColor="Black"
+                    Clicked="seeYourProgressClicked" 
+                    FontSize="Large"
+                    Padding="0,30,0,30"/>
+
+                <Button Text="OPTIONS"
+                    BorderWidth="1" 
+                    BorderColor="White" 
+                    BackgroundColor="White" 
+                    BorderRadius="8"
+                    TextColor="Black"
+                    Clicked="optionsClicked" 
+                    FontSize="Large"
+                    Padding="0,30,0,0"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Log Out"
+                    BorderWidth="1" 
+                    BorderColor="White" 
+                    BackgroundColor="White" 
+                    BorderRadius="8"
+                    TextColor="Black"
+                    Clicked="logOutClicked" 
+                    FontSize="Large"
+                    Padding="0,0,0,0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

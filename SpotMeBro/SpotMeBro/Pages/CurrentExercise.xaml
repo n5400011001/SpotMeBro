@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.CurrentExercise">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label x:Name="exerciseTitlex" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Margin="0,0,0,0">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="                  WEIGHT" 
+                       HorizontalOptions="StartAndExpand" 
+                       VerticalOptions="Center"
+                       FontSize="Medium"/>
+                    <Entry Grid.Column="1" 
+                       Placeholder="Enter weight" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       x:Name="weightsEntered"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="                     REPS" 
+                       HorizontalOptions="StartAndExpand" 
+                       VerticalOptions="Center"
+                       FontSize="Medium"/>
+                    <Entry Grid.Column="1" 
+                       Placeholder="Enter reps" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       x:Name="repsEntered"/>
+                </Grid>
+            </StackLayout>
+           
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Record this set" 
+                    FontSize="Medium" 
+                    Clicked="RecordSet_Clicked" 
+                    BorderColor="LightGray"
+                    BorderWidth="1"
+                    BackgroundColor="White"/>
+                <Button Text="Start a different exercise" 
+                        FontSize="Medium" 
+                        Clicked="PickNextExercise_Clicked"
+                        BorderColor="LightGray"
+                        BorderWidth="1"
+                        BackgroundColor="White"/>
+                <Button Text="Completed exercises" 
+                        FontSize="Medium" 
+                        Clicked="backToTodaysWorkout_Clicked" 
+                        BorderColor="LightGray"
+                        BorderWidth="1"
+                        BackgroundColor="white"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

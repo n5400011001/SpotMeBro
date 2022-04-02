@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.TodaysWorkout">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="TODAYS WORKOUT"
+                   TextColor="White"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Button Text="Pick your next exercise" 
+                    Clicked="PickNextExercise_Clicked" 
+                    Margin="40" 
+                    BorderColor="LightGray"
+                    BorderWidth="1"
+                    BackgroundColor="White"/>
+            <Label Text="Completed exercises listed below:" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <CollectionView x:Name="exercisesDone" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout  HorizontalOptions="StartAndExpand">
+                            <Button x:Name="thisExerciseName"  Text="{Binding ExerciseName}" FontSize="Medium" Clicked="Exercise_Clicked" BackgroundColor="White"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <StackLayout>
+                <Button Text="HOME" 
+                        FontSize="Medium" 
+                        Clicked="backToMain_Clicked"
+                        BorderColor="LightGray"
+                        BorderWidth="1"
+                        BackgroundColor="white"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

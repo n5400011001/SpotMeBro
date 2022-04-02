@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             x:Class="SpotMeBro.Pages.ShowExerciseProgress">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label x:Name="exerciseTitlex" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Label Text="REPS"
+                       Margin="0,30,0,0"
+                       FontSize="Medium"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <microcharts:ChartView x:Name="repsChart"  
+                                 HeightRequest="250"/>
+
+                <Label Text="WEIGHTS"
+                       VerticalOptions="Center"
+                       Margin="0,50,0,0"
+                       FontSize="Medium"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <microcharts:ChartView x:Name="weightChart"  
+                                 HeightRequest="270"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
